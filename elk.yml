@@ -24,7 +24,7 @@ services:
     image: docker.elastic.co/logstash/logstash:${ELK_VERSION}
     volumes:
       - ./config/logstash/pipeline:${WORKDIR}/logstash/pipeline:ro,Z
-      - ./logg:${WORKDIR}/logstash/logg
+      - ./my-log:${WORKDIR}/logstash/my-log
     networks:
       - elk-network
     depends_on:
@@ -36,7 +36,17 @@ services:
       - "9600:9600"
 
   beats:
+    user: root
     image: docker.elastic.co/beats/filebeat:${ELK_VERSION}
+    depends_on:
+      - elasticsearch
+      - kibana
+    networks:
+      - elk-network
+    volumes:
+      - ./config/filebeat/filebeat.yml/:${WORKDIR}/filebeat/filebeat.yml:ro
+      # - ./config/filebeat/modules.d/:${WORKDIR}/filebeat/modules.d:ro // co the doc log ma ko can modules
+      - ./my-log:${WORKDIR}/filebeat/my-log:ro
 
   kibana:
     image: docker.elastic.co/kibana/kibana:${ELK_VERSION}

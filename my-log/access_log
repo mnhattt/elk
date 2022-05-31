@@ -878,6 +878,7 @@
 180.76.15.140 - - [30/Apr/2017:06:33:49 +0000] "GET /2010/06/opengl-3-2-support-and-no-more-popping-clouds/ HTTP/1.1" 301 - "-" "Mozilla/5.0 (compatible; Baiduspider/2.0; +http://www.baidu.com/search/spider.html)"
 54.210.20.202 - - [30/Apr/2017:06:33:51 +0000] "POST /wp-cron.php?doing_wp_cron=1493534031.6427309513092041015625 HTTP/1.1" 200 - "http://sundog-soft.com/wp-cron.php?doing_wp_cron=1493534031.6427309513092041015625" "WordPress/4.7.4; http://sundog-soft.com"
 180.76.15.5 - - [30/Apr/2017:06:33:51 +0000] "GET /2010/06/opengl-3-2-support-and-no-more-popping-clouds/ HTTP/1.1" 200 15466 "-" "Mozilla/5.0 (compatible; Baiduspider/2.0; +http://www.baidu.com/search/spider.html)"
+
 217.182.132.91 - - [30/Apr/2017:06:35:14 +0000] "GET /wp-content/uploads/2011/09/Triton1.jpg HTTP/1.1" 200 160386 "-" "Mozilla/5.0 (compatible; AhrefsBot/5.2; +http://ahrefs.com/robot/)"
 66.249.64.249 - - [30/Apr/2017:06:35:24 +0000] "GET /sds/wp-content/uploads/2016/03/stallwarning-300x108.jpg HTTP/1.1" 301 282 "-" "Googlebot-Image/1.0"
 66.249.64.253 - - [30/Apr/2017:06:35:25 +0000] "GET /wp-content/uploads/2016/03/stallwarning-300x108.jpg HTTP/1.1" 200 8671 "-" "Googlebot-Image/1.0"

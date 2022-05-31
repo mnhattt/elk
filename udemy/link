@@ -1,3 +1,0 @@
-http://media.sundog-soft.com/es/access_log
-
-bin/logstash -f /etc/logstash/conf.d/logstash.conf

@@ -1,0 +1,24 @@
+https://github.com/hpcugent/logstash-patterns/blob/master/files/grok-patterns
+https://github.com/coralogix-resources/logstash-input-plugins
+https://raw.githubusercontent.com/elastic/uptime-contrib/master/dashboards/http_dashboard.json // not found
+
+link
+https://media.sundog-soft.com/es/sample.log
+https://media.sundog-soft.com/es/grok-example.conf
+https://media.sundog-soft.com/es/grok-example-02.conf
+https://media.sundog-soft.com/es/
+
+filter {
+    grok {
+    match => { "message" => [
+                '%{TIMESTAMP_ISO8601:time} %{LOGLEVEL:logLevel} %{GREEDYDATA:logMessage}',
+                '%{IP:clientIP} %{WORD:httpMethod} %{URIPATH:url}'
+               ]
+             }
+}
+
+2020-10-11T09:49:35Z INFO variable server value is tomcat
+2020-03-14T22:50:34Z ERROR cannot find the requested resource
+2020-01-02T14:58:40Z INFO initializing the bootup
+2020-06-04T06:56:04Z DEBUG initializing checksum
+2020-05-07T03:07:11Z INFO variable server value is tomcat
